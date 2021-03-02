@@ -15,8 +15,8 @@ function OpenCon()
 
  function InsertUser($conn, $name, $username, $email, $password, $gender, $dob)
  {
-    $result= $conn->query("INSERT INTO user (name, username, email, password, gender, dob)
-    VALUES ($name, $username, $email, $password, $gender, $dob)");
+    // echo $name, $username, $email, $password, $gender, $dob;
+    $result= $conn->query("INSERT INTO `user` (`name`, `username`, `email`, `password`, `gender`, `dob`) VALUES ('$name', '$username', '$email', '$password', '$gender', '$dob')");
     
     if ($result === TRUE) 
     {
